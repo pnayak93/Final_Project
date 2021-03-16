@@ -1,0 +1,8 @@
+python 3.8.5
+requests 2.25.1
+numpy 1.19.2
+pandas 0.25.3
+bs4 4.9.3
+tqdm 4.54.1
+openpyxl 3.0.7
+xlrd 1.2.0
