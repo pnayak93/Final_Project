@@ -77,7 +77,9 @@ An improvement could be made here where the program would use ENSEMBLE REST API 
 
 3) Sometimes, the number of articles returned does not correspond to the number of articles written if you were to validate against the Pubmed website, and this is due to differences in what the Entrez Eutils API returns versus what the Pubmed website returns. However, I usually see that even if there is a discrepancy in the quantity of articles written, I have not seen a discrepancy where the API returns 0 articles, and the website returns a positive number of articles, so the program should still give some sort of useful information regardless of if the exact number of articles is 100% accurate.
 
-4) Despite being useful, the program could be more user friendly if turned into a web application with a User Interface to allow users who are not familiar with command line/programming usage to extract useful genes from their data.
+4) Occasionally, if a search that returns 0 results on the Pubmed website will return an absurdly large number of articles (in the thousands to tens of thousands) in the program. This is again due to an issue with the Entrez Eutils API. A filter could be written to remove these abnormal results in future.
+
+5) Despite being useful, the program could be more user friendly if turned into a web application with a User Interface to allow users who are not familiar with command line/programming usage to extract useful genes from their data.
 
 
 
