@@ -24,7 +24,7 @@ Additionally, the program currently requires that you have downloaded the "ensem
 
 and we can validate that the number of articles written for this particular search (the search term in this case is "cartilage") by manually searching a gene and the search term on Pubmed, and looking at the number of articles returned on the web page.
 
-Example 1:
+Example 1, compared with genes boxed on first output screenshot:
 ![Validation 1](/Screenshots/Validation-1.PNG)
 
 Example 2:
@@ -64,6 +64,20 @@ After completion, the program should display a completed progress bar and the ti
 The output excel file should now have been created in the working directory:
 
 ![program-output](/Screenshots/program_output.PNG)
+
+## Known Issues and Potential Future Directions
+
+1) When Genes in the user inputted excel file are not found in the local data storage text file, the output is returned under that gene as GENE NOT FOUND IN DATABASE, see example below:
+
+![Not Found](/Screenshots/Genes_not_found.PNG)
+
+2) The program only takes ENSEMBL IDs as input currently, and only finds orthologous between zebrafish, human, rat and mouse. Interconversions between different gene ID formats can be considered in future, as well as the addition of orthologous genes from other organisms (e.g. Drosophila, C. Elegans, etc.)
+
+3) Sometimes, the number of articles returned does not correspond to the number of articles written if you were to validate against the Pubmed website, and this is due to differences in what the Entrez Eutils API returns versus what the Pubmed website returns. However, I usually see that even if there is a discrepancy in the quantity of articles written, I have not seen a discrepancy where the API returns 0 articles, and the website returns a positive number of articles, so the program should still give some sort of useful information regardless of if the exact number of articles is 100% accurate.
+
+4) Despite being useful, the program could be more user friendly if turned into a web application with a User Interface to allow users who are not familiar with command line/programming usage to extract useful genes from their data.
+
+
 
 
 
