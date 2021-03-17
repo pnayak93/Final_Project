@@ -43,7 +43,7 @@ The workflow for the program is as follows:
 
 4) the pubcrawl function runs through each conventional gene name, and searches it along with the user inputted search term(s) against the Entrez eutils Pubmed API, and uses the bs4 package to parse out the number of articles written from the returned XML/HTML data, and place it in the cell under the corresponding conventional gene name in the dataframe.
 
-5) A column is added at the end of the dataframe to calculate the total number of artciles written for all orthologues for all species for each gene in the original input gene list. The dataframe is then output as an excel file in the current directory according to the user-specified output excel file name
+5) A column is added at the end of the dataframe to calculate the total number of articles written for all orthologues for all species for each gene in the original input gene list. The dataframe is then sorted in descending order by the Totals column, and is then output as an excel file in the current directory according to the user-specified output excel file name.
 
 
 Screenshots of Program Working:
