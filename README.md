@@ -71,13 +71,13 @@ The output excel file should now have been created in the working directory:
 
 ![Not Found](/Screenshots/Genes_not_found.PNG)
 
+An improvement could be made here where the program would use ENSEMBLE REST API requests only for genes not found in the local database, so that potentially useful genes are not missed in the search.
+
 2) The program only takes ENSEMBL IDs as input currently, and only finds orthologous between zebrafish, human, rat and mouse. Interconversions between different gene ID formats can be considered in future, as well as the addition of orthologous genes from other organisms (e.g. Drosophila, C. Elegans, etc.)
 
 3) Sometimes, the number of articles returned does not correspond to the number of articles written if you were to validate against the Pubmed website, and this is due to differences in what the Entrez Eutils API returns versus what the Pubmed website returns. However, I usually see that even if there is a discrepancy in the quantity of articles written, I have not seen a discrepancy where the API returns 0 articles, and the website returns a positive number of articles, so the program should still give some sort of useful information regardless of if the exact number of articles is 100% accurate.
 
 4) Despite being useful, the program could be more user friendly if turned into a web application with a User Interface to allow users who are not familiar with command line/programming usage to extract useful genes from their data.
-
-
 
 
 
